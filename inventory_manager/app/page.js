@@ -147,6 +147,14 @@ export default function Home() {
               <Button
                 variant="contained" // Fixed typo: varient -> variant
                 onClick={() => {
+                  addItem(name)
+                }}
+              >
+                Add
+              </Button>
+              <Button
+                variant="contained" // Fixed typo: varient -> variant
+                onClick={() => {
                   removeItem(name)
                 }}
               >
