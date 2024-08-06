@@ -7,7 +7,7 @@ import { collection, query, getDocs, setDoc, doc, getDoc, deleteDoc } from 'fire
 
 export default function Home() {
   const [inventory, setInventory] = useState([])
-  const [open, setOpen] = useState([true])
+  const [open, setOpen] = useState([false])
   const [itemName, setItemName] = useState([''])
 
   const updateInventory = async () => {
@@ -108,7 +108,14 @@ export default function Home() {
           </Stack>
         </Box>
       </Modal>
-      <Typography variant="h1">Inventory Management</Typography>
+      <Button 
+        variant = "contained"
+        onClick={() =>{
+          handleOpen()
+        }} 
+      >
+        Add New Item 
+      </Button>
     </Box>
   )
 }
